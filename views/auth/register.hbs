@@ -1,0 +1,80 @@
+<div class="container mb-5">
+    <div class="row justify-content-center room">
+        <div class="col-md-8">
+            <div class="card mt-5">
+                <div class="card-header">Register</div>
+
+                <div class="card-body">
+                    {{>messages}}
+                    <form method="POST" action="/register">
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">First Name</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="first_name" value="" required autofocus>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Last Name</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="last_name" value="" required autofocus>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="text" class="form-control" name="email" value="" required>
+
+                                
+                                    <span class="invalid-feedback">
+                                        <strong>..</strong>
+                                    </span>
+                               
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password" value="" required>
+
+                                
+                                    <span class="invalid-feedback">
+                                        <strong>..</strong>
+                                    </span>
+                                
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <a href="#" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="lead mt-4">
+                        Have an account? <a href="/login">Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

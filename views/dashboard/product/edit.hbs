@@ -1,0 +1,27 @@
+<section class="content-header">
+    <h1>
+        Product
+        <small>Edit Product</small>
+
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <a href="/dashboard"><i class="fa fa-dashboard"></i> Dashboard</a>
+        </li>
+        <li class="">
+            <a href="/dashboard/products">Products</a>
+        </li>
+        <li>
+            Edit Product
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <form method="POST" action="/dashboard/products/update/{{product.id}}" enctype="multipart/form-data">
+            {{> 'dashboard/product/form'}}
+        </form>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td width="80">Action</td>
+            <td>Quantity</td>
+            <td>Product Name</td>
+            <td width="120">Description</td>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products}}
+        <tr>
+            <td>
+                <a href="/dashboard/inventory/edit/{{this.id}}" class="btn btn-xs btn-default">
+                    <i class="fa fa-edit"></i> Update
+                </a>
+            </td>
+            <td>{{this.quantity}}</td>
+            <td>{{this.name}} {{#if this.bestseller}}<span class="badge badge-secondary">Bestseller</span>{{/if}}</span></td>
+            <td>{{this.description}}</td>
+            
+            {{!-- <td><img src="/uploads/{{this.image}}" alt="category_image"></td> --}}
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>

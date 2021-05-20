@@ -1,0 +1,48 @@
+<div class="col-xs-12 col-md-8 col-lg-9">
+    <div class="box box-success">
+        <div class="box-header">
+            <div class="pull-left">
+                {{!-- @if (Session::has('success'))
+                        <div class="alert alert-success">{{ Session::get('success') }}</div>
+                    @elseif (Session::has('warnning'))
+                        <div class="alert alert-danger">{{ Session::get('warnning') }}</div>
+                    @endif --}}
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body ">
+            <div class="form-group">
+                <label for="">Product Name</label>
+                <input type="text" class="form-control" name=""
+                    value="{{#if product.name}}{{product.name}}{{/if}}" required disabled>
+            </div>
+            <div class="form-group">
+                <label for="">Quantity</label>
+                <input type="number" class="form-control" name="quantity"
+                    value="" min="1" max="100" required>
+                {{!-- {!! $errors->first('slug', '<p class="help-block">:message</p>') !!} --}}
+
+            </div>
+            <div class="form-group">
+                <label for="">Cost Price</label>
+                <input type="text" class="form-control" name=""
+                    value="{{#if product.cost_price}}{{product.cost_price}}{{/if}}" required disabled>
+                {{!-- {!! $errors->first('slug', '<p class="help-block">:message</p>') !!} --}}
+            </div>
+            <div class="form-group">
+                <label for="">Sub Total</label>
+                <input type="text" class="form-control" name="sub_total"
+                    value="" required disabled>
+                {{!-- {!! $errors->first('slug', '<p class="help-block">:message</p>') !!} --}}
+            </div>
+            <hr>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            <button type="submit" class="btn btn-primary">Order</button>
+            <a href="/dashboard/inventory" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+    <!-- /.box -->
+</div>
+{{!-- @include('backend.categories.script') --}}

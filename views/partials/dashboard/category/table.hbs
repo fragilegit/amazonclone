@@ -1,0 +1,38 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td width="80">Action</td>
+            <td>Category Name</td>
+            <td>Description</td>
+            <td width="120">Product Count</td>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        {{#each categories}}
+        <tr>
+            <td>
+                <form method="POST" action="/dashboard/categories/delete/{{this.id}}?_method=DELETE">
+                    <a href="/dashboard/categories/edit/{{this.id}}" class="btn btn-xs btn-default">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    {{!-- <button onclick="return false" type="submit" class="btn btn-xs btn-danger disabled">
+                    <i class="fa fa-times"></i>
+                </button> --}}
+
+                    <button onclick="return confirm('Are you sure?');" type="submit" class="btn btn-xs btn-danger">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </form>
+
+            </td>
+            <td>{{this.title}}</td>
+            <td>{{this.description}}</td>
+            <td></td>
+            {{!-- <td><img src="/uploads/{{this.image}}" alt="category_image"></td> --}}
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>

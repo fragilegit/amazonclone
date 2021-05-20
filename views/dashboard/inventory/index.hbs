@@ -1,0 +1,59 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Products
+    <small>Display all low products </small>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+      <a href="/dashboard"><i class="fa fa-dashboard"></i> Dashboard</a>
+    </li>
+    <li class="">
+      <a href="/dashboard/inventory">Inventory</a>
+    </li>
+    <li>
+      All Low Stock
+    </li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box box-info">
+        <div class="box-header clearfix">
+          <div class="pull-left">
+            
+          </div>
+          <div class="pull-right" style="padding: 7px 0;">
+
+          </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body ">
+          {{!-- ('backend.partials.message') --}}
+          {{#if products.length }}
+          {{> 'dashboard/inventory/table'}}
+          {{else}}
+          <div class="alert alert-info">
+            <strong>No Products Found to refill</strong>
+          </div>
+          {{/if}}
+        </div>
+        <div class="box-footer clearfix">
+          <div class="pull-left">
+            {{!-- {{ $categories->appends( Request::query() )->render() }} --}}
+          </div>
+          <div class="pull-right">
+
+            {{!-- <small>{{ $categoriesCount}} {{ str_plural('item', $categoriesCount)}}</small> --}}
+          </div>
+
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+  </div>
+  <!-- ./row -->

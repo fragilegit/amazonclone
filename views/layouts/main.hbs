@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    {{!-- <link rel='stylesheet' href='/plugins/bootstrap.min.css'/> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  </head>
+  <body class="d-flex flex-column h-100">
+    <header>
+      {{>navbar}}
+    </header>
+    <main role="main" class="flex-shrink-0 container-fluid">
+      {{{body}}}
+    </main>
+    {{>footer}}
+
+    <script src="//code.tidio.co/cbvkeuhkjyglciryefczcxlvbxuylucc.js" async></script>
+    <script src='/jss/jquery.slim.min.js'></script>
+    <script src='/jss/umd/popper.min.js'></script>
+    <script src='/jss/bootstrap.min.js'></script>
+  </body>
+</html>

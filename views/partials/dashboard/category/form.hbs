@@ -1,0 +1,47 @@
+<div class="col-xs-12 col-md-8 col-lg-9">
+    <div class="box box-success">
+        <div class="box-header">
+            <div class="pull-left">
+                {{!-- @if (Session::has('success'))
+                        <div class="alert alert-success">{{ Session::get('success') }}</div>
+                    @elseif (Session::has('warnning'))
+                        <div class="alert alert-danger">{{ Session::get('warnning') }}</div>
+                    @endif --}}
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body ">
+            <div class="form-group">
+                <label for="">Title</label>
+                <input type="text" class="form-control" name="title"
+                    value="{{#if category.title}}{{category.title}}{{/if}}" required>
+            </div>
+            <div class="form-group">
+                <label for="">Slug</label>
+                <input type="text" class="form-control" name="slug"
+                    value="{{#if category.slug}}{{category.slug}}{{/if}}" required>
+                {{!-- {!! $errors->first('slug', '<p class="help-block">:message</p>') !!} --}}
+
+            </div>
+            <div class="form-group">
+                <label for="">Description</label>
+                <input type="text" class="form-control" name="description"
+                    value="{{#if category.description}}{{category.description}}{{/if}}" required>
+                {{!-- {!! $errors->first('slug', '<p class="help-block">:message</p>') !!} --}}
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile" name="image">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <hr>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            <button type="submit" class="btn btn-primary">{{#if category}}Update{{else}}Save{{/if}}</button>
+            <a href="/dashboard/categories" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+    <!-- /.box -->
+</div>
+{{!-- @include('backend.categories.script') --}}

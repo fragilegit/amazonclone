@@ -1,0 +1,32 @@
+<section class="content-header">
+    <h1>
+        Category
+        <small>Edit Category</small>
+
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <a href="/dashboard"><i class="fa fa-dashboard"></i> Dashboard</a>
+        </li>
+        <li class="">
+            <a href="/dashboard/categories">Categories</a>
+        </li>
+        <li>
+            Edit Category
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <form method="POST" action="/dashboard/categories/update/{{category.id}}">
+            {{> 'dashboard/category/form'}}
+        </form>
+        
+    </div>
+</section>
+
+<script type="text/javascript">
+    {{!-- {{> 'dashboard/category/script' }} --}}
+</script>

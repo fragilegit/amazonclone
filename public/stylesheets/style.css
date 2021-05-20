@@ -1,0 +1,23 @@
+/* body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+} */
+
+.card>.card-body>img {
+  max-width: 100%;
+}
+
+.card-h {
+  min-height: 40vh !important;
+}
+.img-h{
+  min-height: inherit;
+}
+
+footer .list-group-item {
+  background-color: transparent;
+}
